@@ -17,6 +17,7 @@ entry_points = """
 # script_name = notify_me.module:function
 # For example:
 # fibonacci = notify_me.skeleton:run
+notify_me = notify_me.script:cli_script
 """
 
 
