@@ -1,5 +1,5 @@
 from click.testing import CliRunner
-from mock import patch
+from unittest.mock import patch
 
 from notify_me.script import cli_script
 
