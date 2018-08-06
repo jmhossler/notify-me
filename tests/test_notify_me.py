@@ -1,4 +1,4 @@
-from mock import patch, MagicMock
+from unittest.mock import patch, MagicMock
 from notify_me.notify_me import notify_me
 
 class TestNotifyMeSuite:
