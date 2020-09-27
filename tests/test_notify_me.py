@@ -16,7 +16,7 @@ def notify_me_plugin_impl(plugin_manager):
 
     class TestPlugin:
         @hookimpl
-        def notify_me(self, config):
+        def notify(self, config):
             mock_notify_me_impl(config)
 
     plugin_manager.register(TestPlugin())
@@ -35,7 +35,7 @@ def test_notify_me_calls_plugins_with_config(notify_me_plugin_impl, mocker):
 
 def test_notify_me_will_not_load_invalid_plugins(plugin_manager):
     class BadPlugin:
-        @hookimpl(specname="notify_me")
+        @hookimpl(specname="notify")
         def do_something_else(self, hello, world):
             pass
 

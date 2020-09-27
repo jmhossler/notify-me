@@ -15,7 +15,7 @@ def main():
     plugin_manager = get_plugin_manager()
     plugin_manager.load_setuptools_entrypoints("notify")
 
-    plugin_manager.hook.notify_me(config=config)
+    plugin_manager.hook.notify(config=config)
 
 
 def get_configuration():
@@ -45,6 +45,6 @@ class NotifyMePluginManager:
     """
 
     def __init__(self):
-        self.plugin_manager = pluggy.PluginManager("notify_me")
+        self.plugin_manager = pluggy.PluginManager("notify")
         self.plugin_manager.add_hookspecs(hookspecs)
         self.plugin_manager.register(lib)
