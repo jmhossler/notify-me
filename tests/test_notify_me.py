@@ -2,7 +2,7 @@ import pluggy
 import pytest
 
 from unittest.mock import MagicMock
-from notify_me import host, hookimpl
+from notify_me_tool import host, hookimpl
 
 
 @pytest.fixture
@@ -26,7 +26,9 @@ def notify_me_plugin_impl(plugin_manager):
 def test_notify_me_calls_plugins_with_config(notify_me_plugin_impl, mocker):
     # Replace configuration file path with test configuration file
     mock_configuration = MagicMock()
-    mocker.patch("notify_me.host.get_configuration", return_value=mock_configuration)
+    mocker.patch(
+        "notify_me_tool.host.get_configuration", return_value=mock_configuration
+    )
 
     host.main()
 

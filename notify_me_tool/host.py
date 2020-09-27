@@ -2,7 +2,7 @@ import configparser
 import os
 import pluggy
 
-from notify_me import hookspecs, lib
+from notify_me_tool import hookspecs, lib
 from singleton_decorator import singleton
 
 
