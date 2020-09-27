@@ -2,7 +2,7 @@ import configparser
 import os
 import pluggy
 
-from notify_me import hookspecs
+from notify_me import hookspecs, lib
 from singleton_decorator import singleton
 
 
@@ -33,3 +33,4 @@ class NotifyMePluginManager:
     def __init__(self):
         self.plugin_manager = pluggy.PluginManager("notify_me")
         self.plugin_manager.add_hookspecs(hookspecs)
+        self.plugin_manager.register(lib)

@@ -1,4 +1,5 @@
 import os
+import pluggy
 import pytest
 
 from unittest.mock import MagicMock
@@ -34,15 +35,10 @@ def test_notify_me_calls_plugins_with_config(notify_me_plugin_impl, mocker):
 
 
 def test_notify_me_will_not_load_invalid_plugins(plugin_manager):
-    mock_invalid_notify_me_impl = MagicMock()
-
     class BadPlugin:
-        @hookimpl
-        def do_something_else(self, config):
-            mock_invalid_notify_me_impl(config)
+        @hookimpl(specname="notify_me")
+        def do_something_else(self, hello, world):
+            pass
 
-    plugin_manager.register(BadPlugin())
-
-    host.main()
-
-    mock_invalid_notify_me_impl.assert_not_called()
+    with pytest.raises(pluggy.manager.PluginValidationError):
+        plugin_manager.register(BadPlugin())
