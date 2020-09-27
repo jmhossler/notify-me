@@ -14,3 +14,4 @@ jobs:
       with:
         # API token to authenticate when uploading package to PyPI (https://pypi.org/manage/account/)
         pypi_token: ${{ secrets.PYPI_TOKEN }}
+        repository_name: notify-me-tool 
