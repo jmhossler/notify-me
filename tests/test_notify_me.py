@@ -1,4 +1,3 @@
-import os
 import pluggy
 import pytest
 
