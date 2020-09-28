@@ -56,11 +56,10 @@ description = "plugin and hook calling mechanisms for python"
 name = "pluggy"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.0.0.dev0"
+version = "0.13.1"
 
 [package.extras]
 dev = ["pre-commit", "tox"]
-testing = ["pytest"]
 
 [[package]]
 category = "dev"
@@ -139,7 +138,7 @@ python-versions = "*"
 version = "0.2.5"
 
 [metadata]
-content-hash = "b45c0d4982c3d05cd5fa5fa7e723e79fbff07a0ca1d545616402afa415a845d3"
+content-hash = "2e306b1429ca1637a19f26b54e68297bb3f68f1ef3261981c7cb7b1fb995b4f3"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -164,8 +163,8 @@ packaging = [
     {file = "packaging-20.4.tar.gz", hash = "sha256:4357f74f47b9c12db93624a82154e9b120fa8293699949152b22065d556079f8"},
 ]
 pluggy = [
-    {file = "pluggy-1.0.0.dev0-py2.py3-none-any.whl", hash = "sha256:467f0219e89bb5061a8429c6fc5cf055fa3983a0e68e84a1d205046306b37d9e"},
-    {file = "pluggy-1.0.0.dev0.tar.gz", hash = "sha256:265a94bf44ca13662f12fcd1b074c14d4b269a712f051b6f644ef7e705d6735f"},
+    {file = "pluggy-0.13.1-py2.py3-none-any.whl", hash = "sha256:966c145cd83c96502c3c3868f50408687b38434af77734af1e9ca461a4081d2d"},
+    {file = "pluggy-0.13.1.tar.gz", hash = "sha256:15b2acde666561e1298d71b523007ed7364de07029219b604cf808bfa1c765b0"},
 ]
 py = [
     {file = "py-1.9.0-py2.py3-none-any.whl", hash = "sha256:366389d1db726cd2fcfc79732e75410e5fe4d31db13692115529d34069a043c2"},

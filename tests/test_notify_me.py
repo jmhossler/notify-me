@@ -37,8 +37,8 @@ def test_notify_me_calls_plugins_with_config(notify_me_plugin_impl, mocker):
 
 def test_notify_me_will_not_load_invalid_plugins(plugin_manager):
     class BadPlugin:
-        @hookimpl(specname="notify")
-        def do_something_else(self, hello, world):
+        @hookimpl
+        def notify(self, hello, world):
             pass
 
     with pytest.raises(pluggy.manager.PluginValidationError):
